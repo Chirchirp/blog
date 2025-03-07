@@ -1,0 +1,5 @@
+title: My Tech Blog
+description: A developer's thoughts
+theme: minima
+plugins:
+  - jekyll-feed
