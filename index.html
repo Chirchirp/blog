@@ -3,6 +3,32 @@
 <head>
     <title>My Blog</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Optional: basic styling for the read more/back links */
+        .read-more-btn, .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 4px;
+        }
+        .back-btn {
+            background-color: #6c757d;
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        // Simple function to reveal hidden content and hide the "Read More" link
+        function showFullBlog() {
+            document.getElementById('full-blog').style.display = 'block';
+            document.getElementById('read-more-link').style.display = 'none';
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -14,59 +40,79 @@
     </header>
 
     <main>
-    <article class="post">
-        <h2>Why Data Cleaning Matters</h2>
-        <div class="post-date">March 1, 2023</div>
+        <article class="post">
+            <h2>Why Data Cleaning Matters</h2>
+            <div class="post-date">March 1, 2023</div>
 
-        <h3>What is Data Cleaning?</h3>
-        <p>Data cleaning, also known as data cleansing or data scrubbing, is the process of detecting and correcting (or removing) corrupt, inaccurate, incomplete, or irrelevant data from a dataset...</p>
+            <!-- AI-Generated Image Placeholder -->
+            <img src="data-cleaning-ai.jpg" 
+                 alt="AI generated illustration of data cleaning" 
+                 style="width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin:20px 0;">
 
-        <h3>What You Need to Know When Doing Data Cleaning</h3>
-        <p>Data cleaning is not a one-size-fits-all process; it varies based on the dataset, industry, and purpose of the analysis...</p>
+            <!-- Brief Summary -->
+            <p>
+                <strong>Summary:</strong> Data cleaning is the process of identifying and fixing incorrect, incomplete, or inconsistent data. 
+                It ensures high-quality, reliable information for analysis, reporting, or machine learning. 
+                Without proper cleaning, insights drawn from data can be misleading, potentially leading to poor decision-making.
+            </p>
 
-        <h3>Understanding Your Data</h3>
-        <p>Before diving into cleaning, it is essential to understand your dataset. This involves identifying data sources, assessing structure, checking consistency, evaluating completeness, and detecting outliers...</p>
+            <!-- "Read More" Button -->
+            <a href="#" id="read-more-link" class="read-more-btn" onclick="showFullBlog(); return false;">Read More</a>
 
-        <h3>Objectives of Data Cleaning</h3>
-        <p>The goal of data cleaning is to enhance data quality, leading to better analysis and decision-making...</p>
+            <!-- Full Blog Content (Initially Hidden) -->
+            <div id="full-blog" class="hidden-content">
+                <h3>What is Data Cleaning?</h3>
+                <p>Data cleaning, also known as data cleansing or data scrubbing, is the process of detecting and correcting (or removing) corrupt, inaccurate, incomplete, or irrelevant data from a dataset...</p>
 
-        <h3>Steps to be Taken When Cleaning Data</h3>
-        <ol>
-            <li>Data Profiling: Examine the data to identify inconsistencies...</li>
-            <li>Handling Missing Values: Decide whether to remove or impute missing values...</li>
-            <li>Removing Duplicates: Identify and eliminate duplicate records...</li>
-            <li>Standardising Data Formats: Convert date formats, units, and text casing...</li>
-            <li>Correcting Data Entry Errors: Identify and rectify incorrect values...</li>
-            <li>Handling Outliers: Investigate and decide whether to keep or remove them...</li>
-            <li>Validating Data Accuracy: Compare cleaned data against source systems...</li>
-            <li>Documenting the Cleaning Process: Keep track of changes made...</li>
-        </ol>
+                <h3>What You Need to Know When Doing Data Cleaning</h3>
+                <p>Data cleaning is not a one-size-fits-all process; it varies based on the dataset, industry, and purpose of the analysis...</p>
 
-        <h3>Best Practices and Poor Practices of Data Cleaning</h3>
-        
-        <h4>Best Practices:</h4>
-        <ul>
-            <li>Use Automated Tools: Leverage Python, R, SQL, or ETL tools...</li>
-            <li>Validate Data Regularly: Set up periodic checks to ensure integrity...</li>
-            <li>Work Closely with Stakeholders: Engage business teams to meet data needs...</li>
-            <li>Create Reproducible Pipelines: Save scripts and workflows...</li>
-            <li>Document Everything: Keep logs of cleaning steps...</li>
-        </ul>
+                <h3>Understanding Your Data</h3>
+                <p>Before diving into cleaning, it is essential to understand your dataset. This involves identifying data sources, assessing structure, checking consistency, evaluating completeness, and detecting outliers...</p>
 
-        <h4>Poor Practices:</h4>
-        <ul>
-            <li>Ignoring Data Understanding: Jumping straight into cleaning...</li>
-            <li>Deleting Data Without Consideration: Removing data without analysis...</li>
-            <li>Overlooking Outliers: Treating all extreme values as errors...</li>
-            <li>Lack of Backup: Failing to keep an original copy of raw data...</li>
-            <li>Manual Cleaning Without Automation: Relying solely on manual processes...</li>
-        </ul>
+                <h3>Objectives of Data Cleaning</h3>
+                <p>The goal of data cleaning is to enhance data quality, leading to better analysis and decision-making...</p>
 
-        <h3>Closing Remarks</h3>
-        <p>Data cleaning is an essential step in any data analysis, reporting, or machine learning project. It ensures that the data is accurate, consistent, and useful for making informed decisions...</p>
-    </article>
-</main>
+                <h3>Steps to be Taken When Cleaning Data</h3>
+                <ol>
+                    <li>Data Profiling: Examine the data to identify inconsistencies...</li>
+                    <li>Handling Missing Values: Decide whether to remove or impute missing values...</li>
+                    <li>Removing Duplicates: Identify and eliminate duplicate records...</li>
+                    <li>Standardising Data Formats: Convert date formats, units, and text casing...</li>
+                    <li>Correcting Data Entry Errors: Identify and rectify incorrect values...</li>
+                    <li>Handling Outliers: Investigate and decide whether to keep or remove them...</li>
+                    <li>Validating Data Accuracy: Compare cleaned data against source systems...</li>
+                    <li>Documenting the Cleaning Process: Keep track of changes made...</li>
+                </ol>
 
+                <h3>Best Practices and Poor Practices of Data Cleaning</h3>
+                
+                <h4>Best Practices:</h4>
+                <ul>
+                    <li>Use Automated Tools: Leverage Python, R, SQL, or ETL tools...</li>
+                    <li>Validate Data Regularly: Set up periodic checks to ensure integrity...</li>
+                    <li>Work Closely with Stakeholders: Engage business teams to meet data needs...</li>
+                    <li>Create Reproducible Pipelines: Save scripts and workflows...</li>
+                    <li>Document Everything: Keep logs of cleaning steps...</li>
+                </ul>
+
+                <h4>Poor Practices:</h4>
+                <ul>
+                    <li>Ignoring Data Understanding: Jumping straight into cleaning...</li>
+                    <li>Deleting Data Without Consideration: Removing data without analysis...</li>
+                    <li>Overlooking Outliers: Treating all extreme values as errors...</li>
+                    <li>Lack of Backup: Failing to keep an original copy of raw data...</li>
+                    <li>Manual Cleaning Without Automation: Relying solely on manual processes...</li>
+                </ul>
+
+                <h3>Closing Remarks</h3>
+                <p>Data cleaning is an essential step in any data analysis, reporting, or machine learning project. It ensures that the data is accurate, consistent, and useful for making informed decisions...</p>
+
+                <!-- Back to Home Button -->
+                <a href="/" class="back-btn">← Back to Home</a>
+            </div>
+        </article>
+    </main>
 
     <footer>
         © 2023 My Blog - Built with GitHub Pages
