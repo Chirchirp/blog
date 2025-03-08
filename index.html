@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My Data Analyst Blog</title>
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Base styling */
+        /* Base Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #fff;
+            color: #333;
             scroll-behavior: smooth;
         }
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #fff;
             padding: 20px;
+            border-bottom: 1px solid #ccc;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
         header h1 {
             margin: 0;
+            font-size: 1.8em;
         }
         nav {
             margin-top: 10px;
         }
         nav a {
-            color: #fff;
+            color: #333;
             margin: 0 15px;
             text-decoration: none;
             font-size: 1.1em;
@@ -36,13 +44,11 @@
         }
         section {
             padding: 60px 20px;
+            background-color: #fff;
         }
-        /* Hero section for Home */
+        /* Hero Section */
         .hero {
-            background: url('/blog/image/data-cleaning-ai.jpg') no-repeat center center/cover;
-            color: #fff;
             text-align: center;
-            padding: 100px 20px;
         }
         .hero h2 {
             font-size: 3em;
@@ -59,6 +65,7 @@
             text-decoration: none;
             color: #fff;
             border-radius: 4px;
+            font-weight: 500;
         }
         .read-more-btn {
             background-color: #007bff;
@@ -66,7 +73,7 @@
         .back-btn {
             background-color: #6c757d;
         }
-        /* Styling for blog post */
+        /* Blog Post Styles */
         .post {
             max-width: 800px;
             margin: 0 auto;
@@ -82,15 +89,17 @@
             display: none;
             margin-top: 20px;
         }
+        /* Footer */
         footer {
-            background-color: #f2f2f2;
+            background-color: #fff;
             text-align: center;
             padding: 20px;
+            border-top: 1px solid #ccc;
             font-size: 0.9em;
         }
     </style>
     <script>
-        // Show the full blog content when "Read More" is clicked.
+        // Function to reveal the full blog content when "Read More" is clicked.
         function showFullBlog() {
             document.getElementById('full-blog').style.display = 'block';
             document.getElementById('read-more-link').style.display = 'none';
@@ -121,7 +130,7 @@
             <h2>Why Data Cleaning Matters</h2>
             <div class="post-date">March 1, 2023</div>
 
-            <!-- Blog Image (already uploaded in /blog/image/) -->
+            <!-- Blog Image with Updated Path -->
             <img src="/blog/image/data-cleaning-ai.jpg" 
                  alt="AI generated illustration of data cleaning">
 
@@ -207,7 +216,7 @@
     <section id="portfolio">
         <h2>Portfolio</h2>
         <p>Explore some of my projects that highlight my skills in data analysis, data visualization, and data cleaning. Check out detailed case studies and project results.</p>
-        <!-- You can include project thumbnails or links to detailed project pages here -->
+        <!-- Include project thumbnails or links to detailed project pages here -->
     </section>
 
     <footer>
