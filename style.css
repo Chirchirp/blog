@@ -1,22 +1,226 @@
-body {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Data Analyst Blog</title>
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+        /* Hero Section */
+        .hero {
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .read-more-btn, .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .read-more-btn {
+            background-color: #007bff;
+        }
+        .back-btn {
+            background-color: #6c757d;
+        }
+        /* Blog Post Styles */
+        .post {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .post img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+        }
+        /* Footer */
+        footer {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ccc;
+            font-size: 0.9em;
+        }
+    </style>
+    <script>
+        // Function to reveal the full blog content when "Read More" is clicked.
+        function showFullBlog() {
+            document.getElementById('full-blog').style.display = 'block';
+            document.getElementById('read-more-link').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>My Data Analyst Blog</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#message">Message</a>
+            <a href="#portfolio">Portfolio</a>
+        </nav>
+    </header>
 
-.post {
-    margin-bottom: 40px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-}
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h2>Welcome to My Data Analyst Blog</h2>
+        <p>Your source for insights on data cleaning, analysis, and more.</p>
+        <a href="#blog" class="read-more-btn">Explore Blog Post</a>
+    </section>
 
-.post-date {
-    color: #666;
-    font-size: 0.9em;
-}
+    <!-- Blog Post Section -->
+    <section id="blog">
+        <article class="post">
+            <h2>Why Data Cleaning Matters</h2>
+            <div class="post-date">March 1, 2023</div>
 
-nav a {
-    margin-right: 15px;
-    text-decoration: none;
-}
+            <!-- Blog Image with Updated Path -->
+            <img src="/blog/image/data-cleaning-ai.jpg" 
+                 alt="AI generated illustration of data cleaning">
+
+            <!-- Brief Summary -->
+            <p>
+                <strong>Summary:</strong> Data cleaning is the process of identifying and fixing incorrect, incomplete, or inconsistent data. 
+                It ensures high-quality, reliable information for analysis, reporting, or machine learning. 
+                Without proper cleaning, insights drawn from data can be misleading.
+            </p>
+
+            <!-- "Read More" Button -->
+            <a href="#" id="read-more-link" class="read-more-btn" onclick="showFullBlog(); return false;">Read More</a>
+
+            <!-- Full Blog Content (Initially Hidden) -->
+            <div id="full-blog" class="hidden-content">
+                <h3>What is Data Cleaning?</h3>
+                <p>Data cleaning, also known as data cleansing or data scrubbing, is the process of detecting and correcting (or removing) corrupt, inaccurate, incomplete, or irrelevant data from a dataset...</p>
+
+                <h3>What You Need to Know When Doing Data Cleaning</h3>
+                <p>Data cleaning is not a one-size-fits-all process; it varies based on the dataset, industry, and purpose of the analysis...</p>
+
+                <h3>Understanding Your Data</h3>
+                <p>Before diving into cleaning, it is essential to understand your dataset. This involves identifying data sources, assessing structure, checking consistency, evaluating completeness, and detecting outliers...</p>
+
+                <h3>Objectives of Data Cleaning</h3>
+                <p>The goal of data cleaning is to enhance data quality, leading to better analysis and decision-making...</p>
+
+                <h3>Steps to be Taken When Cleaning Data</h3>
+                <ol>
+                    <li>Data Profiling: Examine the data to identify inconsistencies...</li>
+                    <li>Handling Missing Values: Decide whether to remove or impute missing values...</li>
+                    <li>Removing Duplicates: Identify and eliminate duplicate records...</li>
+                    <li>Standardising Data Formats: Convert date formats, units, and text casing...</li>
+                    <li>Correcting Data Entry Errors: Identify and rectify incorrect values...</li>
+                    <li>Handling Outliers: Investigate and decide whether to keep or remove them...</li>
+                    <li>Validating Data Accuracy: Compare cleaned data against source systems...</li>
+                    <li>Documenting the Cleaning Process: Keep track of changes made...</li>
+                </ol>
+
+                <h3>Best Practices and Poor Practices of Data Cleaning</h3>
+                
+                <h4>Best Practices:</h4>
+                <ul>
+                    <li>Use Automated Tools: Leverage Python, R, SQL, or ETL tools...</li>
+                    <li>Validate Data Regularly: Set up periodic checks to ensure integrity...</li>
+                    <li>Work Closely with Stakeholders: Engage business teams to meet data needs...</li>
+                    <li>Create Reproducible Pipelines: Save scripts and workflows...</li>
+                    <li>Document Everything: Keep logs of cleaning steps...</li>
+                </ul>
+
+                <h4>Poor Practices:</h4>
+                <ul>
+                    <li>Ignoring Data Understanding: Jumping straight into cleaning...</li>
+                    <li>Deleting Data Without Consideration: Removing data without analysis...</li>
+                    <li>Overlooking Outliers: Treating all extreme values as errors...</li>
+                    <li>Lack of Backup: Failing to keep an original copy of raw data...</li>
+                    <li>Manual Cleaning Without Automation: Relying solely on manual processes...</li>
+                </ul>
+
+                <h3>Closing Remarks</h3>
+                <p>Data cleaning is an essential step in any data analysis, reporting, or machine learning project. It ensures that the data is accurate, consistent, and useful for making informed decisions...</p>
+
+                <!-- Back to Home Button -->
+                <a href="#home" class="back-btn">← Back to Home</a>
+            </div>
+        </article>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        <p>Welcome to my data analyst blog! I share insights on data cleaning, data analysis, and tips for handling complex datasets. My passion is turning raw data into valuable insights for better decision-making.</p>
+    </section>
+
+    <!-- Message Section -->
+    <section id="message">
+        <h2>Message</h2>
+        <p>Feel free to reach out with any questions or comments. I'm always happy to engage with fellow data enthusiasts and share knowledge!</p>
+        <!-- A contact form can be added here if desired -->
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Explore some of my projects that highlight my skills in data analysis, data visualization, and data cleaning. Check out detailed case studies and project results.</p>
+        <!-- Include project thumbnails or links to detailed project pages here -->
+    </section>
+
+    <footer>
+        © 2023 My Blog - Built with GitHub Pages
+    </footer>
+</body>
+</html>
